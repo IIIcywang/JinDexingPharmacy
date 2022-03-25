@@ -1,0 +1,422 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 10560,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1842,
+      "max": [
+        0.550308346748352,
+        1.25435793399811,
+        1.42447745800018
+      ],
+      "min": [
+        -2.05469703674316,
+        -0.0474854707717896,
+        -1.39644742012024
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1842,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1842,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 9984,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 1698,
+      "max": [
+        0.735179781913757,
+        1.44785690307617,
+        1.3881334066391
+      ],
+      "min": [
+        -2.04108715057373,
+        0.0290093421936035,
+        -1.3881334066391
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 1698,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 1698,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5125,
+      "count": 17664,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 3118,
+      "max": [
+        1.46178591251373,
+        2.74632167816162,
+        0.409128427505493
+      ],
+      "min": [
+        -1.01179647445679,
+        0.302513599395752,
+        -1.42132151126862
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 3118,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 3118,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Adobe Substance 3D Painter 7.4.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 42240,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 22104,
+      "byteOffset": 42240,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 22104,
+      "byteOffset": 64344,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14736,
+      "byteOffset": 86448,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 39936,
+      "byteOffset": 101184,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20376,
+      "byteOffset": 141120,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20376,
+      "byteOffset": 161496,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13584,
+      "byteOffset": 181872,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 70656,
+      "byteOffset": 195456,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 37416,
+      "byteOffset": 266112,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 37416,
+      "byteOffset": 303528,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24944,
+      "byteOffset": 340944,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 365888,
+      "uri": "Grinding basin.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "bowl_baseColor.png"
+    },
+    {
+      "uri": "bowl_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "bowl_normal.png"
+    },
+    {
+      "uri": "geart_c_baseColor.png"
+    },
+    {
+      "uri": "geart_c_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "geart_c_normal.png"
+    },
+    {
+      "uri": "skin_baseColor.png"
+    },
+    {
+      "uri": "skin_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "skin_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "bowl",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "name": "geart_c",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "name": "skin",
+      "normalTexture": {
+        "index": 8
+      },
+      "occlusionTexture": {
+        "index": 7
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "skin1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "bowl1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "geart",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2,
+        4,
+        6
+      ],
+      "name": "group"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "skin1"
+    },
+    {
+      "mesh": 0,
+      "name": "skin1"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "bowl1"
+    },
+    {
+      "mesh": 1,
+      "name": "bowl1"
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "geart"
+    },
+    {
+      "mesh": 2,
+      "name": "geart"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    }
+  ]
+}
