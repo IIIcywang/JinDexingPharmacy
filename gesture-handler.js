@@ -4,11 +4,13 @@ AFRAME.registerComponent("gesture-handler", {
     schema: {
         enabled: { default: true },
         rotationFactor: { default: 5 },
-        minScale: { default: 0.3 },
-        maxScale: { default: 8 },
+        minScale: { default: 5 },
+        maxScale: { default: 50 },
     },
 
     init: function() {
+        console.log(this);
+
         this.handleScale = this.handleScale.bind(this);
         this.handleRotation = this.handleRotation.bind(this);
 
@@ -16,23 +18,35 @@ AFRAME.registerComponent("gesture-handler", {
         this.initialScale = this.el.object3D.scale.clone();
         this.scaleFactor = 1;
 
+        //var mychar = document.getElementById("debugText");
+        // mychar.style.display = "none";
+
+        // var loder = document.getElementById("arjs-loader");
+        // loder.style.display = "none";
+        var item1 = document.querySelector("#obj");
+
+        console.log(item1);
         this.el.sceneEl.addEventListener("markerFound", (e) => {
             this.isVisible = true;
-            console.log("found" + this.el);
+            console.log("found marker");
+            // mychar.style.display = "block";
 
-
+            item1.setAttribute('visible', "true");
 
         });
 
+
         this.el.sceneEl.addEventListener("markerLost", (e) => {
             this.isVisible = false;
-            console.log("Lost" + this.el.detail);
-
-
+            console.log("Lost marker");
+            item1.setAttribute('visible', "false");
+            item1.setAttribute('gltf-model', "G/Grindingbasin2.gltf");
+            // mychar.style.display = "none";
         });
     },
 
     update: function() {
+
         if (this.data.enabled) {
             this.el.sceneEl.addEventListener("onefingermove", this.handleRotation);
             this.el.sceneEl.addEventListener("twofingermove", this.handleScale);

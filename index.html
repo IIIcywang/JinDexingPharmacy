@@ -1,7 +1,28 @@
-<!-- import aframe and then ar.js with image tracking / location based features -->
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<!-- <script src='https://raw.githack.com/AR-js-org/AR.js/ES6/aframe/build/aframe-ar-nft.js'></script> -->
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>WebAR</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=1">
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- <script src="aframe.min.js"></script> -->
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
+
+
+    <!-- import aframe and then ar.js with image tracking / location based features -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script> -->
+    <!-- <script src='https://raw.githack.com/AR-js-org/AR.js/ES6/aframe/build/aframe-ar-nft.js'></script> -->
+    <script src="aframe-ar-nft.js"></script>
+    <!-- /*console.warn.bind(console);*/  手動mark!-->
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
+
+</head>
 <!-- style for the loader -->
 <style>
     .arjs-loader {
@@ -24,24 +45,41 @@
     }
 </style>
 
+<div class="arjs-loader">
+    <div>Loading, please wait...</div>
+</div>
+
 <body style="margin : 0px; overflow: hidden;">
 
+    <!-- <div id="debugText" style="margin:auto ;width: 800px ; height: 800px; overflow: block; display: block  !important; padding-left:80px; padding-top :80px">
+        <img id="karigurashi" src="https://thumbs.dreamstime.com/z/magnifying-glass-green-check-tick-vector-icon-illustration-design-concepts-research-results-found-success-reviews-177144396.jpg" crossorigin="anonymous" style=" margin:auto; width: 80px ; height: 80px; overflow: block; display: block  !important;"
+        />
+    </div> -->
 
-    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" id="scene" gesture-detector>
         <a-assets>
-            <a-asset-item response-type="arraybuffer" id="crate-obj" src="G/Grinding_basin.gltf"></a-asset-item>
+            <a-asset-item response-type="arraybuffer" id="crate-obj" src="G/Grindingbasin.gltf"></a-asset-item>
+            <a-asset-item response-type="arraybuffer" id="item3" src="G/Grindingbasin.gltf"></a-asset-item>
+
             <!-- <a-asset-item response-type="arraybuffer" id="crate-obj" src="https://rawcdn.githack.com/IIIcywang/JinDexingPharmacy/ef540294256d9e416097114e2cac98ef4b471353/G/Grinding%20basin.gltf"></a-asset-item> -->
 
         </a-assets>
+
+
         <!-- <a-nft type="nft" url="<path-to-your-image-descriptors>" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5"> -->
         <!-- <a-entity gltf-model="<path-to-your-model>" scale="5 5 5" position="50 150 0">
             </a-entity>
         </a-nft> -->
         <!-- <a-nft type="nft" url="./G/Grinding_basinblack" smooth="true" smoothCount="15" smoothTolerance=".05" smoothThreshold="5"> -->
-        <a-nft type="nft" url="https://raw.githack.com/IIIcywang/JinDexingPharmacy/main/G/Grinding%20basinblack" smooth="true" smoothCount="15" smoothTolerance=".05" smoothThreshold="5">
+        <a-nft type="nft" url="https://raw.githack.com/IIIcywang/JinDexingPharmacy/main/G/Grinding%20basinblack" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" scale="1 1 1" position="0 0 0" rotation="0 0 0" raycaster="objects: .clickable"
+            emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <!-- <a-entity geometry="primitive: box ;width: 0.5; height: 0.5; depth: 0.5" scale="2 2 2" position="0 0 -10" material="color: red"></a-entity> -->
 
-            <a-entity gltf-model="#crate-obj" scale="20 20 20" position="100 0 0" rotation="0 0 -30">
         </a-nft>
+        <a-entity id="obj" gltf-model="#crate-obj" scale="1 1 1" position="0 0 -50" rotation="0 0 0" class="clickable" gesture-handler="minScale: 0.25; maxScale: 10" visible="false">
+        </a-entity>
         <a-entity camera></a-entity>
     </a-scene>
+
+
 </body>
