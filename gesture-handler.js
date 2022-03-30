@@ -30,7 +30,10 @@ AFRAME.registerComponent("gesture-handler", {
             this.isVisible = true;
             console.log("found marker");
             // mychar.style.display = "block";
-
+            console.log("this obj");
+            console.log(this.nextSibling);
+            console.log("this.el");
+            console.log(this.el);
             item1.setAttribute('visible', "true");
 
         });
@@ -40,6 +43,7 @@ AFRAME.registerComponent("gesture-handler", {
             this.isVisible = false;
             console.log("Lost marker");
             item1.setAttribute('visible', "false");
+
             item1.setAttribute('gltf-model', "G/Grindingbasin2.gltf");
             // mychar.style.display = "none";
         });
